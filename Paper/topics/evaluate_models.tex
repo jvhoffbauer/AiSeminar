@@ -1,0 +1,10 @@
+\section{Evaluating Models}
+
+% Overfitting
+% Seperate training and test data
+% k-fold cross validation
+
+It is neccessary to evaluate the performance of machine learning models. To evaluate a model, it is common to use the output error on a certain dataset to evaluate the performance of the model. In most cases, the initial dataset is split into a training set and a test set. The training set is used to train the model, the test set is used to evaluate the model. It is important to not use the same dataset for training and testing, because this contains the risk of the model simply memorizing all single entries of the data set, which is called overfitting. 
+\\
+\\
+To enhance the data usage, a method called $k$-fold cross validation can be used. The idea is to do multiple training and evaluation rounds by selecting different training and test sets each round. The dataset is split into $k$ equally sized subsets. Then $k$ rounds of training and evaluating are done. Each round $1/k$ of the data is used as test set, the remaining data is used to train the model. The average score of the data should give a better estimate about the models quality. Typical values for $k$ are $k=5$ or $k=10$.
